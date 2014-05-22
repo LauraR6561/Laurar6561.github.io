@@ -1,3 +1,6 @@
+body{
+    margin:0px auto;
+}
 #mainHeading{
     position:absolute;
     width:100%;
@@ -17,4 +20,6 @@
 #mainHeadingText{
     position:relative;
     text-shadow: 0 1px 0 #fff;
+    top:2%;
+    left:2%;
 }
