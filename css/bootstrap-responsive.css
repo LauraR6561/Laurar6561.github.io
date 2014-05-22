@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Bootstrap Responsive v2.3.2
  *
  * Copyright 2013 Twitter, Inc
@@ -966,6 +966,7 @@
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
     padding: 5px;
+    margin-top: -60px;
   }
   .navbar .container {
     width: auto;
