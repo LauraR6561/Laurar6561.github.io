@@ -1,5 +1,28 @@
-<html>
-<body>
-    <h1>Laura's Git page</h1>
-</body>
-</html>
+---
+layout: layout
+title: "Laura Rutz"
+---
+<h2>Posts</h2>
+<table class="table table-striped">
+    <tbody>
+    {% for post in site.posts %}
+    <tr>
+        <td>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <i>{{ post.summary }}</i>
+
+            <p>
+                <small>
+                    {{ post.date | date: "%B %e, %Y" }} - {{ post.category }} -
+                    {% for tag in post.tags %}
+                    <a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>
+                    {% if forloop.last != true %}
+                    {% endif %}
+                    {% endfor %} .
+                </small>
+            </p>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
