@@ -30,3 +30,10 @@ body{
         width:94%;
     }
 }
+
+@media (max-width: 767px){
+    #content > .table{
+        width:90%;
+        margin-right:10px;
+    }
+}
