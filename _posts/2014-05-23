@@ -1,0 +1,14 @@
+---
+layout: post
+title: First Post
+category: Coding
+tags: blog
+year: 2014
+month: 5
+day: 21
+published: true
+summary: introduction Blog Post
+description: Test
+---
+
+<h2>Initial Post</h2>
