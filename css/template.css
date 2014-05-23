@@ -17,3 +17,7 @@ body{
 h2{
     text-shadow: 0 1px 0 #fff;
 }
+
+a{
+    color:blue;
+}
