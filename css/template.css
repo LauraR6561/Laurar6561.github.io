@@ -27,7 +27,6 @@ body{
 
 @media (max-width: 979px){
     #content > .table{
-        width:100%;
-        margin-right:10px;
+        width:96%;
     }
 }
