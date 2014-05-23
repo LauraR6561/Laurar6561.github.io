@@ -29,6 +29,7 @@ body{
 .skills{
     width:35%;
     margin-left: 2.5%;
+    float:right;
 }
 
 .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
