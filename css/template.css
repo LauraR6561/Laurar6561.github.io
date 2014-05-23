@@ -30,6 +30,13 @@ body{
     color:#333;
 }
 
+@media (max-width: 979px){
+    #content > .table{
+        width:96%;
+        margin-left:2%;
+    }
+}
+
 @media (max-width: 767px){
     #content > .table{
         width:85%;
