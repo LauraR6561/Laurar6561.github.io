@@ -807,7 +807,7 @@
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
-    margin-right: -20px;
+    margin-right: 20px;
     margin-left: -20px;
   }
   .container-fluid {
@@ -905,8 +905,7 @@
     display: block;
     line-height: 20px;
   }
-  input[type="checkbox"],
-  input[type="radio"] {
+  input[type=checkbox], input[type=radio] {
     border: 1px solid #ccc;
   }
   .form-horizontal .control-label {
