@@ -34,8 +34,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     background-color:#181818;
     color:#f5f5f5;
     width:60%;
-    max-height: 500px;
-    overflow: auto;
     margin-left:2%;
     border:2px inset;
     float:left;
@@ -60,7 +58,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     margin-top:0px;
 }
 
-#content > .well{
+#content {
     max-height:500px;
     overflow: auto;
 }
