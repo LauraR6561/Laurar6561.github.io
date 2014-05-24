@@ -47,7 +47,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 @media (max-width: 979px){
     
     html{
-        background-image: image("/img/denver-long.png");
+        background-image: url("/img/denver-long.png");
     }
     #content > .table{
         width:96%;
