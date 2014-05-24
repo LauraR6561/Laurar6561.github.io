@@ -44,6 +44,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     margin-right: 2.5%;
     float:right;
     padding:2%;
+    max-height: 400px;
+    overflow: auto;
 }
 
 .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
