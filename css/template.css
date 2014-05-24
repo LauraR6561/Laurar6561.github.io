@@ -13,7 +13,6 @@ body{
 
 #content h2{
     text-shadow: 0 1px 0 #fff;
-    margin-left:2%;
 }
 
 #content > .table{
@@ -26,10 +25,11 @@ body{
     float:left;
 }
 
-.skills{
+.well .skills{
     width:30%;
     margin-right: 2.5%;
     float:right;
+    padding:2%;
 }
 
 .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
@@ -58,7 +58,7 @@ body{
         margin-right:0px;
     }
     .skills{
-        width:85%;
+        width:91%;
         float:none;
         margin-left:2%;
         margin-right:0px;
