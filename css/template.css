@@ -46,9 +46,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 @media (max-width: 979px){
     
-    html{
-        background-image: url("/img/denver-long.png");
-    }
+
     
     body{
 background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(186,187,190,0.59) 22%, rgba(150,151,153,1) 37%, rgba(17,17,17,1) 93%, rgba(17,17,17,1) 100%); /* FF3.6+ */
