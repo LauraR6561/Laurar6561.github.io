@@ -60,7 +60,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     margin-top:0px;
 }
 
-.well{
+#content > .well{
     max-height:500px;
     overflow: auto;
 }
