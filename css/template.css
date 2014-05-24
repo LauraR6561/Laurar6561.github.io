@@ -2,7 +2,7 @@ html{
     background-image:url("/img/denver.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position:top;
 }
 body{
     padding:0px;
