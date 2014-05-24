@@ -43,7 +43,7 @@ body{
     }
     
     .skills{
-        width:90%;
+        width:96%;
         float:none;
         margin-left:2%;
     }
@@ -51,12 +51,12 @@ body{
 
 @media (max-width: 767px){
     #content > .table{
-        width:92%;
-        margin-left:0px;
+        width:96%;
+        margin-left:2px;
     }
     .skills{
-        width:90%;
+        width:96%;
         float:none;
-        margin-left:0%;
+        margin-left:2%;
     }
 }
