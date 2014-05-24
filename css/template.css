@@ -34,7 +34,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     background-color:#181818;
     color:#f5f5f5;
     width:60%;
-    max-height: 700px;
+    max-height: 500px;
     overflow: auto;
     margin-left:2%;
     border:2px inset;
@@ -42,7 +42,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 .skills{
-    max-height: 500px;
+    max-height: 400px;
     overflow: auto;
 }
 
