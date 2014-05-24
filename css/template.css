@@ -69,7 +69,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 }
     .blog-entry {
-    width: 96%;
+    width: 92%;
+    padding:2%;
     margin-left: 2%;
     float:none;
     }
