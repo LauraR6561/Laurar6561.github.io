@@ -1,7 +1,7 @@
 html{
     background-image:url("/img/denver.png");
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position:top;
 }
 body{
