@@ -1,3 +1,6 @@
+html{
+    background-color:blue;
+}
 body{
     padding:0px;
 	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(186,187,190,0.23) 13%, rgba(167,168,170,0.53) 30%, rgba(167,168,170,1) 57%); /* FF3.6+ */
