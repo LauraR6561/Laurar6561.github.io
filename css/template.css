@@ -43,6 +43,12 @@ body{
         width:96%;
         margin-left:2%;
     }
+    
+    .skills{
+        width:96%;
+        margin-left: 2%;
+        float:none;
+    }
 }
 
 @media (max-width: 767px){
