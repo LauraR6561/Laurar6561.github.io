@@ -39,6 +39,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     float:left;
 }
 
+.skills{
+    max-height: 300px;
+    overflow: scroll;
+}
+
 .Rside{
     width:30%;
     margin-right: 2.5%;
@@ -79,7 +84,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         width:96%;
         margin-left:2%;
         float:none;
-        max-height: 75%;
+        max-height: 50%;
         overflow: scroll;
     }
     
