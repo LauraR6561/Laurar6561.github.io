@@ -1,6 +1,6 @@
 html{
     background-image:url("/img/denver-sunny.png");
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
