@@ -53,10 +53,12 @@ body{
     #content > .table{
         width:96%;
         margin-left:2%;
+        margin-right:0px;
     }
     .skills{
-        width:83%;
+        width:85%;
         float:none;
         margin-left:2%;
+        margin-right:0px;
     }
 }
