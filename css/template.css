@@ -52,10 +52,10 @@ body{
 @media (max-width: 767px){
     #content > .table{
         width:96%;
-        margin-left:2px;
+        margin-left:2%;
     }
     .skills{
-        width:96%;
+        width:92%;
         float:none;
         margin-left:2%;
     }
