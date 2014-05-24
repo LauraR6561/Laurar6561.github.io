@@ -46,7 +46,7 @@ body{
     }
     
     .skills{
-        width:90%;
+        width:96%;
         float:none;
         margin-left:2%;
     }
@@ -54,11 +54,11 @@ body{
 
 @media (max-width: 767px){
     #content > .table{
-        width:95%;
+        width:92%;
         margin-left:0px;
     }
     .skills{
-        width:96%;
+        width:90%;
         float:none;
         margin-left:0%;
     }
