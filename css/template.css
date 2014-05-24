@@ -79,6 +79,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         width:96%;
         margin-left:2%;
         float:none;
+        max-height: 75%;
+        overflow: scroll;
     }
     
     .Rside{
