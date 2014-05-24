@@ -22,6 +22,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     margin-left:2%;
 }
 
+#content {
+    
+}
+
 #content > .table{
     border-collapse: inherit;
     background-color:#181818;
