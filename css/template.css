@@ -22,7 +22,7 @@ body{
     margin-left:2%;
 }
 
-.blog-entry {
+.Lside {
     width: 60%;
     margin-left: 2%;
     float:left;
@@ -74,7 +74,7 @@ body{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#111111',GradientType=0 ); /* IE6-9 */
 
 }
-    .blog-entry {
+    .Lside {
     width: 92%;
     padding:2%;
     margin-left: 2%;
