@@ -22,7 +22,7 @@ body{
     margin-left:2%;
 }
 
-#container{
+.container{
     display:block;
     width:100%;
     height:80%;
