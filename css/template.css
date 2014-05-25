@@ -41,9 +41,10 @@ body{
     float:left;
 }
 
-#content{
-    display:block;
-    float:none;
+.navbar{
+    width: 100%;
+    clear: both;
+    margin-bottom: 0px;
 }
 
 .Rside{
