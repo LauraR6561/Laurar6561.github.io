@@ -41,6 +41,11 @@ body{
     float:left;
 }
 
+#content{
+    display:block;
+    float:none;
+}
+
 .Rside{
     width:30%;
     margin-right: 2.5%;
