@@ -84,7 +84,6 @@ body{
     width:18%;
     float:right;
     text-align: right;
-    font-weight: bold;
 }
 .resumelist{
     list-style: none;
@@ -100,6 +99,10 @@ body{
 }
 .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
     color:#333;
+}
+
+.topMargin{
+    margin-top: 20px;
 }
 .well > h3{
     margin-top:0px;
