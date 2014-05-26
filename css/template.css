@@ -17,18 +17,13 @@ body{
 
 }
 
+.textcenter{
+    text-align: center;
+}
+
 #content h2{
     text-shadow: 0 1px 0 #fff;
     margin-left:2%;
-}
-
-
-
-.Lside {
-    width: 60%;
-    margin-left: 2%;
-    float:left;
-    
 }
 
 #content > .table{
@@ -39,6 +34,13 @@ body{
     margin-left:2%;
     border:2px inset;
     float:left;
+}
+
+.Lside {
+    width: 60%;
+    margin-left: 2%;
+    float:left;
+    
 }
 
 .navbar{
@@ -56,13 +58,36 @@ body{
     overflow: auto;
 }
 
+#resume{
+    width:100%;
+}
+.resumecontent{
+    width:75%;
+    margin:0px 1%;
+    float:left;
+}
+.resumedate{
+    width:18%;
+    float:right;
+    text-align: right;
+}
+.resumelist{
+    list-style: none;
+    padding: 0px 1%;   
+}
+
+.resumetitle{
+    text-decoration: underline;
+    width:100%;
+    clear:both;
+    padding-top: 20px;
+}
 .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
     color:#333;
 }
 .well > h3{
     margin-top:0px;
 }
-
 
 @media (max-width: 979px){
     
