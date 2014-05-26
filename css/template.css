@@ -71,6 +71,11 @@ body{
     margin:0px 1%;
     float:left;
 }
+
+.resumelast{
+    width:75%;
+    margin:0px 1%;
+}
 .resumedate{
     width:18%;
     float:right;
@@ -86,6 +91,7 @@ body{
     width:100%;
     clear:both;
     padding-top: 20px;
+    padding-left: 1%;
 }
 .table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
     color:#333;
