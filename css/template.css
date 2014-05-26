@@ -60,7 +60,11 @@ body{
 
 #resume{
     width:90%;
-    background-color: white;
+    margin:0px auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border:2px ridge #F1A023;
+    padding: 20px 0px;
 }
 .resumecontent{
     width:75%;
