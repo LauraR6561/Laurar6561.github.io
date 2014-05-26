@@ -17,6 +17,9 @@ body{
 
 }
 
+.boldtext{
+    font-weight: bold;
+}
 .textcenter{
     text-align: center;
 }
@@ -81,6 +84,7 @@ body{
     width:18%;
     float:right;
     text-align: right;
+    font-weight: bold;
 }
 .resumelist{
     list-style: none;
