@@ -59,7 +59,8 @@ body{
 }
 
 #resume{
-    width:100%;
+    width:90%;
+    background-color: white;
 }
 .resumecontent{
     width:75%;
