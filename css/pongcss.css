@@ -2,25 +2,39 @@
     position: relative;
     top: 50px;
     left: 2%;
+    border:4px ridge #F1A023;
+    box-shadow:2px 2px 2px #111111; 
+	-moz-box-shadow:2px 2px 2px #111111; 
+	-webkit-box-shadow:2px 2px 2px #111111;
 }
 
 #ball {
     position: absolute;
+    box-shadow:2px 2px 2px #111111; 
+	-moz-box-shadow:2px 2px 2px #111111; 
+	-webkit-box-shadow:2px 2px 2px #111111;
 }
 
 #paddle {
     position: absolute;
-    background-color: #aaa;
+    background-color: #aaa;	
+    box-shadow:2px 2px 2px #111111; 
+	-moz-box-shadow:2px 2px 2px #111111; 
+	-webkit-box-shadow:2px 2px 2px #111111;
+
 }
 #paddleTwo {
     position: absolute;
     background-color: #aaa;
+    box-shadow:2px 2px 2px #111111; 
+	-moz-box-shadow:2px 2px 2px #111111; 
+	-webkit-box-shadow:2px 2px 2px #111111;
 }
 
 #instructions {
     display : block;
     position: relative;
-    top: 40%;
+    top: 45%;
     margin-left: auto;
     margin-right: auto;
     padding : 10px;
@@ -29,27 +43,36 @@
     border-radius: 5px;
     width: 15%;
     text-align: center;
+    box-shadow:2px 2px 2px #111111; 
+	-moz-box-shadow:2px 2px 2px #111111; 
+	-webkit-box-shadow:2px 2px 2px #111111;
 }
 #scorePanel {
     position: absolute;
-    top: 0px;
+    top: -13px;
     left: 150px;
     width: 300px;
     height: 20px;
     background-color: white;
-    border: 1px solid red;
+    border:2px ridge #F1A023;
     border-radius: 4px;
-    text-align: center;
+    text-align: center;   
+    box-shadow:2px 2px 2px #111111; 
+	-moz-box-shadow:2px 2px 2px #111111; 
+	-webkit-box-shadow:1px 2px 2px #111111;
 }
 
 #playerScorePanel {
     position: absolute;
-    bottom: 0px;
+    bottom: -13px;
     left: 150px;
     width: 300px;
     height: 20px;
     background-color: white;
-    border: 1px solid red;
+    border:2px ridge #F1A023;
     border-radius: 4px;
     text-align: center;
+    box-shadow:2px 2px 2px #111111; 
+	-moz-box-shadow:2px 2px 2px #111111; 
+	-webkit-box-shadow:1px 2px 2px #111111;
 }

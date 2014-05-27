@@ -308,7 +308,7 @@ function timerTick() {
     if ((prevx <= (paddle.xpos - ball.size)) && (currx > (paddle.xpos - ball.size))) {
         if ((curry > (paddle.ypos - Math.floor(ball.size/2))) && (curry < paddle.ypos +   paddle.height - Math.floor(ball.size/2))) {
             ball.xspeed *= -1.1;
-            paddle.setColor(getRandomColor());
+            //paddle.setColor(getRandomColor());
             ball.setColor(getRandomColor());
             score ++;
             outputScore(score, highScore);
@@ -318,7 +318,7 @@ function timerTick() {
     if ((prevx >= (paddleTwo.xpos + paddleTwo.width)) && (currx < (paddleTwo.xpos + paddleTwo.width))) {
         if ((curry > (paddleTwo.ypos - Math.floor(ball.size/2))) && (curry < paddleTwo.ypos +   paddle.height - Math.floor(ball.size/2))) {
             ball.xspeed *= -1.1;
-            paddleTwo.setColor(getRandomColor());
+            //paddleTwo.setColor(getRandomColor());
             ball.setColor(getRandomColor());
             score ++;
             outputScore(score, highScore);
