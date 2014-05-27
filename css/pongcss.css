@@ -81,7 +81,7 @@
     margin-top: -357;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 979px){
     #playerInstructions{
         margin-top: 100;
     }
