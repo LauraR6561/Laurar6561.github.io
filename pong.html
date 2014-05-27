@@ -271,9 +271,11 @@ function timerTick() {
     if (currx < 0) {
         currx = 0;
        playerTwo ++;
+       ball.setPosition((Math.floor(fieldWidth / 10)), Math.floor((fieldHeight - ballSize) / 2));
        outputPlayerScore(playerOne, playerTwo);
        gameOver();
     }
+    
     // look for hit on top wall
     if (curry < 0) {
         curry = 0;
@@ -284,6 +286,7 @@ function timerTick() {
         currx = (field.width - ball.size);
         //ball.xspeed *= -1;
         playerOne ++;
+        ball.setPosition((Math.floor(fieldWidth / 10)), Math.floor((fieldHeight - ballSize) / 2));
         outputPlayerScore(playerOne, playerTwo);
         gameOver();
     }
