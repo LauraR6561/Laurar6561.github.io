@@ -57,6 +57,8 @@ var playerOne = 0;
 var playerTwo = 0;
 var highScore = 0;
 
+var click = 0;
+
 // Debug output
 // you can send debug print message to the screen using this function
 // this is helpful if you are not getting the results that you expect
@@ -105,8 +107,11 @@ function PlayingField(width, height, color) {
     this.obj.onclick = function() {
         // start the game when the field is clicked
         // setup the timer tick event handler
+        click ++;
         document.getElementById('instructions').style.display = 'none';
-        resetGame();
+        if(click<=1){
+            resetGame();
+        }
         if (intTimeHandle === 0) {
             intTimeHandle = setInterval(function(){timerTick();},10);
         }
@@ -272,8 +277,9 @@ function timerTick() {
     if (currx < 0) {
         currx = 0;
        playerTwo ++;
-       ball.setPosition((Math.floor(fieldWidth / 10)), Math.floor((fieldHeight - ballSize) / 2));
+       ball.setPosition(50, -50);
        outputPlayerScore(playerOne, playerTwo);
+       click = 0;
        gameOver();
     }
     
@@ -287,8 +293,9 @@ function timerTick() {
         currx = (field.width - ball.size);
         //ball.xspeed *= -1;
         playerOne ++;
-        ball.setPosition((Math.floor(fieldWidth / 10)), Math.floor((fieldHeight - ballSize) / 2));
+        ball.setPosition(50,-50);
         outputPlayerScore(playerOne, playerTwo);
+        click = 0;
         gameOver();
     }
     // look for hit on bottom wall
