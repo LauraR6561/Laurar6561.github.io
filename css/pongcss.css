@@ -1,7 +1,7 @@
-﻿#playingField {
+#playingField {
     position: relative;
-    top: 0;
-    left: 0;
+    top: 50px;
+    left: 2%;
 }
 
 #ball {
@@ -28,6 +28,7 @@
     border : 2px solid red;
     border-radius: 5px;
     width: 15%;
+    text-align: center;
 }
 #scorePanel {
     position: absolute;
@@ -38,6 +39,7 @@
     background-color: white;
     border: 1px solid red;
     border-radius: 4px;
+    text-align: center;
 }
 
 #playerScorePanel {
@@ -49,4 +51,5 @@
     background-color: white;
     border: 1px solid red;
     border-radius: 4px;
+    text-align: center;
 }
