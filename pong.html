@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="css/pongcss.css"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+
+<body>
+<div id='playingField'>
+    <div id='output'></div>
+    <div id='paddleTwo'></div>
+    <div id='ball'></div>
+    <div id='paddle'></div>
+    <div id='instructions'>Click To Start</div>
+    <div id='scorePanel'>Total Hits: 0 High Score:0</div>
+    <div id='playerScorePanel'>Player One: 0  Player Two: 0 </div>
+    
+</div>
+<script type="text/javascript" language="javascript">
+// Pong game
+// Bouncing ball and user-controlled paddle
+
+// Game configuration
+// Change these values to customize your game
+var fieldWidth = 600;      // how wide is the playing field
+var fieldHeight = 400;     // how tall is the playing field
+var fieldColor = 0x337733; // what color is the playing field
+
+var paddleWidth = 10;      // how wide is the paddle
+var paddleHeight = 80;     // how tall is the paddle
+var paddleColor = 0x00ff00;// what color is the paddle
+var paddleSpeed = 6;      // how fast will the paddle move
+var paddleXPos = fieldWidth - Math.floor(fieldWidth / 10); // 10% from right
+var paddleYPos = Math.floor((fieldHeight - paddleHeight)/2); // middle
+
+var paddleTwoWidth = 10;      // how wide is the paddle
+var paddleTwoHeight = 80;     // how tall is the paddle
+var paddleTwoColor = 0x00ff00;// what color is the paddle
+var paddleTwoSpeed = 6;      // how fast will the paddle move
+var paddleTwoXPos = fieldWidth - Math.floor(fieldWidth / 1.1); // 10% from right
+var paddleTwoYPos = Math.floor((fieldHeight - paddleHeight)/2); // middle
+
+var ballSize = 10;         // how big is the ball
+var ballXPos = Math.floor(fieldWidth / 10); // start 10% from left
+var ballYPos = Math.floor((fieldHeight - ballSize) / 2); // middle
+var ballXSpeed = Math.floor(Math.random() * 3) + 1;        // what is the initial velocity of the ball
+var ballYSpeed = 2;
+var ballColor = 0xffffff;  // what color is the ball
+
+var keyState = 0;          // current state of arrow keys
+var keyStateTwo = 0;
+var intTimeHandle =0;         // pointer to the interval timer
+
+var score = 0;
+var playerOne = 0;
+var playerTwo = 0;
+var highScore = 0;
+
+// Debug output
+// you can send debug print message to the screen using this function
+// this is helpful if you are not getting the results that you expect
+function output(message) {
+    document.getElementById("output").innerHTML += message + "<br/>\n";
+}
+
+function outputScore(score, theHighScore) {
+    document.getElementById("scorePanel").innerHTML = "Total Hits: " + score +" " + " High Score: " + theHighScore; 
+}
+
+function outputPlayerScore(thePlayerOne, thePlayerTwo) {
+    document.getElementById("playerScorePanel").innerHTML = "Player One:  " + thePlayerOne +" " + "PlayerTwo: " + thePlayerTwo;
+}
+
+function setPosition(x,y) {
+    this.xpos = x;
+    this.ypos = y;
+    this.obj.style.top = y.toString() + "px";
+    this.obj.style.left = x.toString() + "px";
+}
+
+function setColor(newColor) {
+    newColor = "000000" + newColor.toString(16);
+    this.obj.style.backgroundColor = "#" + newColor.substr(newColor.length - 6);
+}
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    return color;
+}
+
+// Playing field object
+function PlayingField(width, height, color) {
+    this.width = width;
+    this.height = height;
+    this.obj = document.getElementById("playingField");
+    this.obj.style.width = width.toString() + "px";
+    this.obj.style.height = height.toString() + "px";
+    this.setColor = setColor;
+    this.setColor(color);
+    this.obj.onclick = function() {
+        // start the game when the field is clicked
+        // setup the timer tick event handler
+        document.getElementById('instructions').style.display = 'none';
+        resetGame();
+        if (intTimeHandle === 0) {
+            intTimeHandle = setInterval(function(){timerTick();},10);
+        }
+    };
+}
+
+// Paddle object
+function Paddle(width, height, color, speed, xpos, ypos) {
+    this.width = width;
+    this.height = height;
+    this.speed = speed;
+    this.obj = document.getElementById("paddle");
+    this.obj.style.width = width.toString() + "px";
+    this.obj.style.height = height.toString() + "px";
+    
+    // you can use this method to change the color of the paddle
+    this.setColor = setColor;
+    this.setColor(color);
+
+    // you can use this method to change the location of the paddle
+    this.setPosition = setPosition;
+    this.setPosition(xpos,ypos);
+}
+
+// Paddle Two object
+function PaddleTwo(width, height, color, speed, xpos, ypos) {
+    this.width = width;
+    this.height = height;
+    this.speed = speed;
+    this.obj = document.getElementById("paddleTwo");
+    this.obj.style.width = width.toString() + "px";
+    this.obj.style.height = height.toString() + "px";
+    
+    // you can use this method to change the color of the paddle
+    this.setColor = setColor;
+    this.setColor(color);
+
+    // you can use this method to change the location of the paddle
+    this.setPosition = setPosition;
+    this.setPosition(xpos,ypos);
+}
+
+// Ball object
+function Ball(size, xpos, ypos, xspeed, yspeed, color) {
+    this.xspeed = xspeed;
+    this.yspeed = yspeed;
+
+    this.obj = document.getElementById("ball");
+
+    // you can use this method to update the ball's location
+    this.setPosition = setPosition;
+
+    // you can use this method to change the size of the ball
+    this.setSize = setSize;
+    function setSize(size) {
+        this.size = size;
+        this.obj.style.width = this.size.toString() + "px";
+        this.obj.style.height = this.size.toString() + "px";
+        var radius = Math.floor(size / 2);
+        this.obj.style.borderRadius = radius.toString() + "px";
+        this.obj.style.MozBorderRadius = radius.toString() + "px";
+        this.obj.style.WebKitBorderRadius = radius.toString() + "px";
+    }
+    
+    this.setPosition(xpos,ypos);
+    this.setSize(size);
+    this.setColor = setColor;
+    this.setColor(color);
+}
+
+// instantiate a field object - this is the background object
+var field = new PlayingField(fieldWidth, fieldHeight, fieldColor);
+
+// instantiate a paddle object - this is what the player controls
+var paddle = new Paddle(paddleWidth, paddleHeight, paddleColor, paddleSpeed, paddleXPos, paddleYPos);
+
+var paddleTwo = new PaddleTwo(paddleTwoWidth, paddleTwoHeight, paddleTwoColor, paddleTwoSpeed, paddleTwoXPos, paddleTwoYPos);
+
+// instantiate a ball object - the bouncing ball
+var ball = new Ball(ballSize, ballXPos, ballYPos, ballXSpeed, ballYSpeed, ballColor);
+
+
+function resetGame(){
+    score = 0;
+    outputScore(score, highScore);
+    field = new PlayingField(fieldWidth, fieldHeight, fieldColor);
+    paddle = new Paddle(paddleWidth, paddleHeight, paddleColor, paddleSpeed, paddleXPos,                                 
+    paddleYPos);
+    paddleTwo = new PaddleTwo(paddleTwoWidth, paddleTwoHeight, paddleTwoColor, paddleTwoSpeed, 
+    paddleTwoXPos, paddleTwoYPos);
+    ball = new Ball(ballSize, ballXPos, ballYPos, ballXSpeed, ballYSpeed, ballColor);
+    intTimeHandle = 0;
+}
+// The following functions track the arrow keys when they are pressed
+// pressing the up arrow key will cause keyState to be -1
+// (negative is the up direction)
+// pressing the down arrow key will cause keyState to be 1
+// (positive is the down direction)
+// releasing either key will cause keyState to be 0
+// (no direction - stop the motion of the paddle)
+document.onkeydown = function (e) {
+    var evt = e || window.event;
+    if (evt.keyCode == 38) {
+        // up arrow
+        keyState = -1;
+    } else if (evt.keyCode == 40) {
+        // down arrow
+        keyState = 1;
+    }
+      if (evt.keyCode == 65) {
+        // up arrow
+        keyStateTwo = -1;
+    } else if (evt.keyCode == 90) {
+        // down arrow
+        keyStateTwo = 1;
+    }
+    return false;
+};
+
+document.onkeyup = function (e) {
+    var evt = e || window.event;
+    if (evt.keyCode == 38 || evt.keyCode == 40) {
+        keyState = 0;
+    }
+    if (evt.keyCode == 65 || evt.keyCode == 90) {
+        keyStateTwo = 0;
+    }
+    return false;
+};
+
+
+
+// This function should be called when the ball contacts the right wall
+// of the field. This should only happen when the player fails to contact
+// the ball with the paddle.
+function gameOver() {    
+    if(score > highScore){
+        highScore = score;
+        outputScore(score, highScore);
+    }
+    clearInterval(intTimeHandle);
+    document.getElementById('instructions').innerHTML = "Play Again?";
+    document.getElementById('instructions').style.display = "block";
+    field.setColor(0x033003);
+}
+
+// create a timer call back function
+// this is a list of things that need to be done every time the timer ticks
+function timerTick() {
+    // ******************** put your code here ***************************
+    
+    // Adjust the ball position
+    var currx = ball.xpos;
+    var curry = ball.ypos;
+    var prevx = ball.xpos;
+    var myScore = score;
+    
+    currx += ball.xspeed;
+    curry += ball.yspeed;
+    
+    // Check for ball leaving field
+    // look for hit on left wall
+    if (currx < 0) {
+        currx = 0;
+       playerTwo ++;
+       outputPlayerScore(playerOne, playerTwo);
+       gameOver();
+    }
+    // look for hit on top wall
+    if (curry < 0) {
+        curry = 0;
+        ball.yspeed *= -1;
+    }
+    // look for hit on right wall
+    if (currx > (field.width - ball.size)) {
+        currx = (field.width - ball.size);
+        //ball.xspeed *= -1;
+        playerOne ++;
+        outputPlayerScore(playerOne, playerTwo);
+        gameOver();
+    }
+    // look for hit on bottom wall
+    if (curry > (field.height - ball.size)) {
+        curry = (field.height - ball.size);
+        ball.yspeed *= -1;
+    }
+    
+    // check for ball contacting paddle One
+    if ((prevx <= (paddle.xpos - ball.size)) && (currx > (paddle.xpos - ball.size))) {
+        if ((curry > (paddle.ypos - Math.floor(ball.size/2))) && (curry < paddle.ypos +   paddle.height - Math.floor(ball.size/2))) {
+            ball.xspeed *= -1.1;
+            paddle.setColor(getRandomColor());
+            ball.setColor(getRandomColor());
+            score ++;
+            outputScore(score, highScore);
+        }
+    }
+    // check for ball contacting paddle Two
+    if ((prevx >= (paddleTwo.xpos + paddleTwo.width)) && (currx < (paddleTwo.xpos + paddleTwo.width))) {
+        if ((curry > (paddleTwo.ypos - Math.floor(ball.size/2))) && (curry < paddleTwo.ypos +   paddle.height - Math.floor(ball.size/2))) {
+            ball.xspeed *= -1.1;
+            paddleTwo.setColor(getRandomColor());
+            ball.setColor(getRandomColor());
+            score ++;
+            outputScore(score, highScore);
+        }
+    }
+    
+    ball.setPosition(currx,curry);
+    
+    // Adjust the paddle One position
+    var pady = paddle.ypos;
+    pady = pady + (paddle.speed * keyState);
+    if (pady < 0) {
+        pady = 0;
+        keyState = 0;
+    }
+    if (pady > (field.height - paddle.height)) {
+        pady = field.height - paddle.height;
+        keyState = 0;
+    }
+    paddle.setPosition(paddle.xpos, pady);
+    
+    // Adjust the paddle Two position
+    var padyTwo = paddleTwo.ypos;
+    padyTwo = padyTwo + (paddleTwo.speed * keyStateTwo);
+    if (padyTwo < 0) {
+        padyTwo = 0;
+        keyStateTwo = 0;
+    }
+    if (padyTwo > (field.height - paddleTwo.height)) {
+        padyTwo = field.height - paddleTwo.height;
+        keyStateTwo = 0;
+    }
+    paddleTwo.setPosition(paddleTwo.xpos, padyTwo);
+    
+} 
+       
+</script>
+</body>
+
+</html>
