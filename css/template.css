@@ -147,11 +147,7 @@ body{
         margin-left:2%;
     }
 }
-@media (max-width:653){
-    .conditional{
-        display: none;
-    }
-}
+
 
 @media (max-width: 767px){
     
