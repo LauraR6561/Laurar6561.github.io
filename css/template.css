@@ -73,6 +73,7 @@ body{
 .profile-pic{
     width:25%;
     float:left;
+    border:2px ridge silver;
 }
 
 .Rside{
