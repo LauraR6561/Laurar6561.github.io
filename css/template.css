@@ -27,6 +27,7 @@ body{
 #content h2{
     text-shadow: 0 1px 0 #fff;
     margin-left:2%;
+    margin-top: 50px;
 }
 
 #content > .table{
@@ -51,10 +52,27 @@ body{
     
 }
 
+.my-description{
+    width: 73%;
+    float:left;
+    margin-left: 2%;
+}
+
+.my-additional-info{
+    width:100%;
+    clear:both;
+    padding-top:10px;
+}
+
 .navbar{
     width: 100%;
     clear: both;
     margin-bottom: 0px;
+}
+
+.profile-pic{
+    width:25%;
+    float:left;
 }
 
 .Rside{
@@ -174,6 +192,27 @@ body{
         margin-left:2%;
         margin-right:0px;
     }
+    
+    #content h2{
+    margin-top: 20px;
+    }
+    
+    .my-description{
+    width: 100%;
+    float:none;
+    margin-left: 0%;
+    }
+
+    .my-additional-info{
+        padding-top:0px;
+    }
+    
+    .profile-pic{
+        width:50%;
+        float:none;
+        margin-left:25%;
+    }
+    
     .Rside{
         width:91%;
         float:none;
