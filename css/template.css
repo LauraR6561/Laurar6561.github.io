@@ -27,7 +27,8 @@ body{
 #content h2{
     text-shadow: 0 1px 0 #fff;
     margin-left:2%;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 #content > .table{
