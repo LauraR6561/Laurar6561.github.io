@@ -126,11 +126,11 @@ body{
 }
 
 .table-striped tbody>tr:nth-child(odd)>td:hover, .table-striped tbody>tr:nth-child(odd)>th:hover {
-    background-color: #313131;
+    background-color: #EFEFEF;
 }
 
 .table-striped tbody>tr:nth-child(even)>td:hover, .table-striped tbody>tr:nth-child(even)>th:hover {
-    background-color: #E4E4E4;
+    background-color:  #202020; 
 }
 
 .topMargin{
