@@ -1,7 +1,9 @@
 
 .backgrounddiv {
     background-color: #062D4F;
-    border:6px #062D4F ridge;
+    border-width: 6px; 
+    border-color:#062D4F;
+    border-style: ridge;
     width:200px; 
     margin:0px auto;
 	box-shadow:2px 2px 2px #111111; 
@@ -10,6 +12,10 @@
     -webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
+    -webkit-transition: border-color 0.1s linear;
+	-moz-transition: border-color .1s linear;
+	-o-transition:  border-color .1s linear;
+	transition:  border-color .1s linear;
 }
 
 #display{
@@ -42,31 +48,30 @@
 
 .calcRow{
     display: block;
-    background-color: #0A4881;
-    border-top:2px #062D4F ridge;
+    border-top-color: #062D4F;
+    border-top-width:2px;
+    border-top-style:ridge;
     padding: 3px;
-    -webkit-transition: background-color 1s linear;
-	-moz-transition: background-color 1s linear;
-	-o-transition:  background-color 1s linear;
-	transition:  background-color 1s linear;
+}
+.calcRowColor{
+    background-color: #0A4881;
+    -webkit-transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	-o-transition:  background-color .3s linear;
+	transition:  background-color .3s linear;
+}
+
+.calcRowColor:hover{
+    background-color: white;
 }
 
 .calcRow:hover{
-    background-color: white;
+    border-top-color: #062D4F;
 }
 
 .calcbutton{
     list-style:none;
     min-width: 40px;
-    background: rgb(208,228,247); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(208,228,247,1) 0%, rgba(115,177,231,1) 7%, rgba(10,119,213,1) 50%, rgba(83,159,225,1) 90%, rgba(135,188,234,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(208,228,247,1)), color-stop(7%,rgba(115,177,231,1)), color-stop(50%,rgba(10,119,213,1)), color-stop(90%,rgba(83,159,225,1)), color-stop(100%,rgba(135,188,234,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(208,228,247,1) 0%,rgba(115,177,231,1) 7%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 90%,rgba(135,188,234,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(208,228,247,1) 0%,rgba(115,177,231,1) 7%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 90%,rgba(135,188,234,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(208,228,247,1) 0%,rgba(115,177,231,1) 7%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 90%,rgba(135,188,234,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(208,228,247,1) 0%,rgba(115,177,231,1) 7%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 90%,rgba(135,188,234,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=0 ); /* IE6-9 */
-
     border:1px #AAAAAA outset;
     color:white;
     padding:10px;
@@ -77,6 +82,23 @@
     -webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
+    -webkit-transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	-o-transition:  background-color .3s linear;
+	transition:  background-color .3s linear;
+    
+}
+
+.buttonColor{
+    background: rgb(208,228,247); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(208,228,247,1) 0%, rgba(115,177,231,1) 7%, rgba(10,119,213,1) 50%, rgba(83,159,225,1) 90%, rgba(135,188,234,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(208,228,247,1)), color-stop(7%,rgba(115,177,231,1)), color-stop(50%,rgba(10,119,213,1)), color-stop(90%,rgba(83,159,225,1)), color-stop(100%,rgba(135,188,234,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(208,228,247,1) 0%,rgba(115,177,231,1) 7%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 90%,rgba(135,188,234,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(208,228,247,1) 0%,rgba(115,177,231,1) 7%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 90%,rgba(135,188,234,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(208,228,247,1) 0%,rgba(115,177,231,1) 7%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 90%,rgba(135,188,234,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(208,228,247,1) 0%,rgba(115,177,231,1) 7%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 90%,rgba(135,188,234,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=0 ); /* IE6-9 */
+
 }
 
 .calcbutton:hover{
@@ -87,6 +109,11 @@
 }
 
 .calcbutton:focus{
+    border:1px #AAAAAA inset; 
+    outline:none;
+}
+
+.buttonColor:focus{
     border:1px #AAAAAA inset;
     outline:none;
     background: rgb(83,135,225); /* Old browsers */
@@ -112,3 +139,14 @@
     float:right;
     color:white;
 }
+
+.feature-options li{
+    display: inline;
+    list-style: none;
+     
+}
+
+.feature-options button{
+     margin-bottom:5px; 
+}
+

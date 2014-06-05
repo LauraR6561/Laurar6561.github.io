@@ -44,8 +44,6 @@ body{
     float:left;
 }
 
-#content-wrapper{
-}
 
 .footer{
     position:sticky;
@@ -102,7 +100,6 @@ body{
     margin-right: 2.5%;
     float:right;
     padding:2%;
-    max-height: 300px;
     overflow: auto;
 }
 
