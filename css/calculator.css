@@ -33,7 +33,7 @@
     margin:0px 15%;
     border: 1px #AAAAAA inset;
     text-align: right;
-    padding-right:4px;
+    padding-right:2px;
 }
 
 .calcRow{
@@ -66,6 +66,7 @@
     border:1px #AAAAAA outset;
     color:white;
     padding:10px;
+    margin-left: 3px;
     text-align: center;
     font-family: monospace;
     font-size: 1.3em;
