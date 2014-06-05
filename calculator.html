@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" href= calculator.css type="text/css"/>
+<script src="calculator.js"></script>
+<title>Calculator</title>
+</head>
+
+<body>
+
+<div id="calcbody" class="backgrounddiv">
+    
+<div id="mydisplay" class="displaydiv">
+                <input type="text" id="display" name="display" readonly="true" value="0" class="numValue">
+</div>
+
+<div id="buttonRow1" class="calcRow">
+    <input type="button" id="clear" name="clear" value="C" class="calcbutton"
+        onclick="calculatorApp.clearNumbers()">
+    <input type="button" id="clearErr" name="clearErr" value="CE"                      class="calcbutton" onclick="calculatorApp.clearError()">
+    <input type="button" id="sign" name="sign" value="+/-" class="calcbutton" onclick="calculatorApp.clickNegative()">
+    <input type="button" id="close" name="close" value="X" class="closebutton" onclick="calculatorApp.clickClose();">
+</div>
+    
+<div id="buttonRow2" class="calcRow">
+    <input type="button" id="num7" name="num7" value="7" class="calcbutton"             onclick="calculatorApp.clickDigit(7);">
+    <input type="button" id="num8" name="num8" value="8" class="calcbutton"
+        onclick= "calculatorApp.clickDigit(8);">
+    <input type="button" id="num9" name="num9" value="9" class="calcbutton"
+        onclick= "calculatorApp.clickDigit(9);">
+    <input type="button" id="opMult" name="opMult" value="*" class="calcbutton"
+        onclick= "calculatorApp.clickOperator('*');">
+</div>
+    
+<div id="buttonRow3" class="calcRow">
+    <input type="button" id="num4" name="num4" value="4" class="calcbutton"
+        onclick= "calculatorApp.clickDigit(4);">
+    <input type="button" id="num5" name="num5" value="5" class="calcbutton"
+        onclick= "calculatorApp.clickDigit(5);">
+    <input type="button" id="num6" name="num6" value="6" class="calcbutton"
+        onclick= "calculatorApp.clickDigit(6);">
+    <input type="button" id="opDiv" name="opDiv" value="/" class="calcbutton"
+        onclick= "calculatorApp.clickOperator('/');">
+</div>
+    
+<div id="buttonRow4" class="calcRow">
+    <input type="button" id="num1" name="num1" value="1" class="calcbutton"
+        onclick= "calculatorApp.clickDigit(1);">
+    <input type="button" id="num2" name="num2" value="2" class="calcbutton"
+        onclick= "calculatorApp.clickDigit(2);">
+    <input type="button" id="num3" name="num3" value="3" class="calcbutton"
+        onclick= "calculatorApp.clickDigit(3);">
+    <input type="button" id="opPlus" name="opPlus" value="+" class="calcbutton"
+        onclick= "calculatorApp.clickOperator('+');">
+</div>
+
+<div id="buttonRow5" class="calcRow">
+    <input type="button" id="num0" name="num0" value="0" class="calcbutton"
+      onclick= "calculatorApp.clickDigit(0);">
+    <input type="button" id="opPoint" name="opPoint" value="."                         class="calcbutton" onclick= "calculatorApp.clickDecimal();">
+    <input type="button" id="opEqual" name="opEqual" value="="                         class="calcbutton" onClick="calculatorApp.clickEquals()">
+    <input type="button" id="opMinus" name="opMinus" value="-"                         class="calcbutton" onclick= "calculatorApp.clickOperator('-');">
+</div>
+</body>
