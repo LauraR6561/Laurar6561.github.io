@@ -12,6 +12,9 @@
 	border-radius: 6px;
 }
 
+#display{
+    margin-bottom: 0px;
+}
 .displaydiv{
     display: block;
     width:100%;
@@ -30,6 +33,7 @@
 .numValue{
     width:70%;
     height:25px;
+    padding:5px 0px;
     margin:0px 15%;
     border: 1px #AAAAAA inset;
     text-align: right;
