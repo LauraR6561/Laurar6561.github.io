@@ -66,7 +66,7 @@
     border:1px #AAAAAA outset;
     color:white;
     padding:10px;
-    margin-left: 3px;
+    margin-left: 4px;
     text-align: center;
     font-family: monospace;
     font-size: 1.3em;
@@ -103,7 +103,7 @@
 
 .closebutton {
     margin-top: 12px;
-    margin-right:8px;
+    margin-right:5px;
     background-color: red;
     float:right;
     color:white;
