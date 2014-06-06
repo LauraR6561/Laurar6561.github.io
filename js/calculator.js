@@ -181,6 +181,32 @@ window.borderColor = {
         $(".calcRow ").css("border-top-color", "black");
     }   
 };
+window.numColor = {
+    red: function(){
+        $(".numColor ").css("color", "#FD0000");
+    },
+    green: function(){
+        $(".numColor ").css("color", "#00FF00");
+    },
+    yellow: function(){
+        $(".numColor ").css("color", "#FFFF00");
+    },
+    blue: function(){
+        $(".numColor ").css("color", "#0A4881");
+    },
+    purple: function(){
+        $(".numColor ").css("color", "#C100C1");
+    },
+    orange: function(){
+        $(".numColor ").css("color", "#FF8906");
+    },
+    white: function(){
+        $(".numColor ").css("color", "white");
+    },
+    black: function(){
+        $(".numColor ").css("color", "black");
+    }   
+};
 
     
 
