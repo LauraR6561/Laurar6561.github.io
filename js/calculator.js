@@ -117,12 +117,10 @@ window.buttonColor = {
     red: function(){
         $(".buttonColor").removeClass("buttonColor");
         $(".calcbutton").css("background-color", "#FD0000");
-        $(".calcbutton").css("border-style", "inset");
     },
     green: function(){
         $(".buttonColor").removeClass("buttonColor");
         $(".calcbutton").css("background-color", "#00FF00");
-        $(".calcbutton").css("border-style", "inset");
     },
     yellow: function(){
         $(".buttonColor").removeClass("buttonColor");

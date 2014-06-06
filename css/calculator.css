@@ -109,7 +109,6 @@
 }
 
 .calcbutton:focus{
-    border:1px #AAAAAA inset; 
     outline:none;
 }
 
