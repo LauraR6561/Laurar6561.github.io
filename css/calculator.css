@@ -141,7 +141,10 @@
 
 .colorButtons:hover{
     border-style:inset;
-    outline: none;
+    outline-color: none;
+}
+.colorButtons:focus{
+    outline-color: none;
 }
 .redButton{
     background-color: #FD0000;
