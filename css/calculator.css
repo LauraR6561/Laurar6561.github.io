@@ -139,9 +139,9 @@
     color:white;
 }
 
-.colorButtons:focus{
+.colorButtons:hover{
     border-style:inset;
-    outline-color: #F1A023;
+    outline: none;
 }
 .redButton{
     background-color: #FD0000;
