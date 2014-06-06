@@ -141,6 +141,7 @@
 
 .colorButtons:focus{
     border-style:inset;
+    outline-color: #F1A023;
 }
 .redButton{
     background-color: #FD0000;
@@ -168,6 +169,7 @@
 
 .whiteButton{
     background-color:white;
+    color:black;
 }
 .blackButton{
     background-color:black;
