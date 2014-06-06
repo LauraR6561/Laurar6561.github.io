@@ -133,15 +133,20 @@
 }
 
 .colorButtons{
-    border-radius:10px; 
+    border-radius:5px; 
     border-width:2px;
     border-style:outset;
+    color:white;
+}
+
+.colorButtons:focus{
+    border-style:inset;
 }
 .redButton{
     background-color: #FD0000;
 }
 
-.greenColor{
+.greenButton{
     background-color:#00FF00;
 }
 
@@ -153,11 +158,11 @@
     background-color:#0A4881;
 }
 
-.purple{
+.purpleButton{
     background-color:#C100C1;
 }
 
-.orange{
+.orangeButton{
     background-color:#FF8906;
 }
 
